@@ -32,8 +32,13 @@ class MessagesController < ApplicationController
     redirect_to messages_url
   end
   
+  #削除
+  def destroy
+    @message = Message.find(params[:id])
+    @message.destroy
+    redirect_to messages_url
+  end
   
-
   
   private
   def message_params
