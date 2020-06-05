@@ -16,6 +16,12 @@ class MessagesController < ApplicationController
     redirect_to messages_url
   end
 
+  #詳細
+  def show
+    @message = Message.find(params[:id])
+  end
+  
+
   
   private
   def message_params
