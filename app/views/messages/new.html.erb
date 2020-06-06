@@ -1,0 +1,19 @@
+<h1>メッセージ作成</h1>
+
+<div class="message_form">
+  <%= form_with url: messages_path, method: :post, local: true do |f|%>
+    <p>
+      <%= f.label :title, "タイトル" %>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :content, "内容" %>
+      <%= f.text_field :content %>
+    </p>
+    <p>
+      <%= f.submit "送信" %>
+    </p>
+  <% end %>
+<end>
+
+<%= link_to "一覧画面へ", messages_path %>
