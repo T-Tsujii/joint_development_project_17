@@ -3,9 +3,11 @@
 
 <div class="messages_index">
   <% @messages.each do |message| %>
-    <%= message.content %>
-    <%= link_to "詳細", message_path(message)%>
-    <%= link_to "編集", edit_message_path(message)%>
-    <%= link_to "削除", message_path(message), method: :delete, data: {confirm: "削除しますか？"}%>
+    <p>
+      <%= message.title %>
+      <%= link_to "詳細", message_path(message)%>
+      <%= link_to "編集", edit_message_path(message)%>
+      <%= link_to "削除", message_path(message), method: :delete, data: {confirm: "削除しますか？"}%>
+    </p>
   <% end %>
 <end>

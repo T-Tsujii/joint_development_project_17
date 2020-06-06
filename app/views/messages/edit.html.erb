@@ -1,12 +1,17 @@
 <h1>メッセージ編集</h1>
 
 <%= form_with url: message_url(@message), method: :patch, local: true do |f| %>
+  <p>
     <%= f.label :title, "タイトル" %>
     <%= f.text_field :title, value: @message.title %>
+  </p>
+  <p>
     <%= f.label :content, "内容" %>
     <%= f.text_field :content, value: @message.content %>
+  </p>
+  <p>
     <%= f.submit "送信" %>
-  <% end %>
-<end>
+  </p>
+<% end %>
 
 <%= link_to "一覧画面へ", messages_path %>
