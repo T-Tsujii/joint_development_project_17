@@ -10,6 +10,9 @@ class TasksController < ApplicationController
     Task.create(task_params)
     redirect_to action: :index
   end
+  def show
+    @task = Task.find(params[:id])
+  end
 
   private
   def task_params
